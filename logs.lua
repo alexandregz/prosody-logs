@@ -67,11 +67,6 @@ function read_items(file)
 	
 	local items = {}
 	for i in string.gmatch(str, '(item%({.-\n}%);%s)') do
-		-- if string.find(i, 'atopado string que peta') then
-		-- 	print('i: '..i);
-		-- 	return 
-		-- end
-
 		table.insert(items, i)
 	end
 	return items
