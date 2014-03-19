@@ -46,8 +46,11 @@ function parse_item(item)
 			else
 				msg = '';
 			end
-		elseif value['name'] == "subject" and type(value['attr']) == "table" then
+		elseif value['name'] == "subject" and type(value['attr']) == "table" and value[1] ~= nil then
 			msg = '[TOPIC NOVO] '..value[1];
+			-- local inspect = require('lib/inspect')
+			-- print(inspect(value))
+			-- os.exit()
 		end
 	end
 
